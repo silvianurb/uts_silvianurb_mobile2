@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uts_pm2_silvianurb/header_drawer.dart';
 import 'package:uts_pm2_silvianurb/artikel_screen.dart';
-import 'package:uts_pm2_silvianurb/panduan_screen.dart';
+import 'package:uts_pm2_silvianurb/pages/panduan_screen.dart';
 import 'package:uts_pm2_silvianurb/sejarah_screen.dart';
 import 'package:uts_pm2_silvianurb/jenis_screen.dart';
 import 'package:uts_pm2_silvianurb/kelas_screen.dart';
