@@ -23,42 +23,52 @@ class MenikmatiKopi extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const <Widget>[
               Text(
-                'Menikmati kopi bukan hanya sekadar meminumnya, tetapi juga tentang menciptakan pengalaman yang memuaskan dan menikmati setiap nuansa cita rasa yang ditawarkan.',
+                '"Kopi adalah peluk hangat di pagi yang dingin, sebuah kisah yang mengalir dalam setiap tegukan. Ia membuka mata kita, mengajak kita untuk menghirup dunia dengan lebih dalam. Kopi bukan sekadar minuman, tapi teman yang setia dalam perjalanan hidup kita."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Pertama-tama, pilih biji kopi berkualitas tinggi, karena kualitas biji kopi sangat mempengaruhi hasil akhir. Giling biji kopi Anda secara fresh agar aroma yang khas dapat terlepas dengan maksimal.',
+                '"Saat air mendidih dan aroma kopi mengepul di udara, dunia seolah menemukan irama baru. Seperti musik yang meresap ke setiap celah, kopi menyentuh hati dan membuka pintu rahasia kenangan yang terlupakan."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Saat menyeduh, pertimbangkan metode penyeduhan yang sesuai dengan selera Anda, apakah itu pour-over, French press, atau metode lainnya.',
+                '"Kopi adalah seni yang mengalir dalam setiap coraknya. Dari biji yang rupa-rupanya biasa, lahirlah keajaiban dalam secangkir. Setiap tegukan seperti kisah hidup, dengan pahit dan manis yang berpadu harmonis."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Saat menuangkan air mendidih ke atas kopi, nikmati aroma yang muncul dan lihat bagaimana remasan kopi tercampur dalam air panas.',
+                '"Di balik setiap cangkir kopi, terdapat petualangan yang tak terlukiskan. Dari tanaman kopi yang menari di bawah matahari hingga proses sang barista yang menjadi penari rahasia, kopimu adalah perjalanan yang tiada akhir."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Setelah penyeduhan selesai, ambil waktu sejenak untuk mencium aroma kopi yang segar sebelum pertama kali menyeruput.',
+                '"Cinta seperti kopi, hangat dan menyeduh hati. Saat kita mencicipinya, kita merasakan kehangatan sentuhan yang lembut. Kopi, seperti cinta, mampu membangunkan jiwa dan memancarkan cahaya di setiap sudut gelap."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Saat menyeruput, biarkan kopi melintasi seluruh lidah Anda, mencari nuansa rasa yang berbeda mulai dari rasa manis hingga pahit.',
+                '"Dalam setiap titik hitam kopi, tersimpan rahasia kehidupan. Sebuah kisah yang tertulis dalam serbuk halus dan aroma yang menghipnotis. Kopi mengajarkan kita untuk menikmati setiap momen, meski pahit terkadang menyelinap."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Selama menikmati kopi, hindari menambahkan terlalu banyak gula atau susu, karena hal tersebut dapat mengaburkan cita rasa alami kopi.',
+                '"Seiring waktu berjalan, cangkir kopi menjadi cermin perasaan. Dari aroma yang menenangkan hingga kenangan yang mendalam, kita dapat membaca sejarah hidup dalam setiap tetes kopi yang jatuh."',
                 style: TextStyle(fontSize: 16.0),
               ),
               const SizedBox(height: 16.0),
               Text(
-                'Nikmati kopi secara perlahan-lahan, sambil menciptakan momen santai di mana Anda dapat benar-benar terhubung dengan sensasi kopi yang Anda minum. Apakah itu sambil membaca buku, mendengarkan musik, atau berbicara dengan teman, menjadikan ritual menikmati kopi sebagai pengalaman yang dinantikan dapat meningkatkan kebahagiaan dan kepuasan.',
+                '"Kopi bukan hanya minuman, tapi perjalanan yang tak terlupakan. Dari daun kopi yang menari di angin hingga cangkir di tangan, setiap momen adalah bagian dari simfoni rasa yang tiada duanya."',
+                style: TextStyle(fontSize: 16.0),
+              ),
+              const SizedBox(height: 16.0),
+              Text(
+                '"Setiap cangkir kopi adalah kisah perjalanan biji yang melintasi gunung, sungai, hingga tiba di genggaman kita. Ia seperti petualangan yang terasa di setiap sudut lidah, membawa kita melewati pemandangan indah cita rasa."',
+                style: TextStyle(fontSize: 16.0),
+              ),
+              const SizedBox(height: 16.0),
+              Text(
+                '"Kopi adalah waktu yang berjalan lebih lambat. Saat kita duduk di sudut kedai, menatap cangkir yang menghiasi meja, waktu seolah berhenti sejenak. Kopi membangunkan rasa hidup, memberikan kita kesempatan untuk menikmati momen yang sederhana namun penuh makna."',
                 style: TextStyle(fontSize: 16.0),
               ),
             ],
