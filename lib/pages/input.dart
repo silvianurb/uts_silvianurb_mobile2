@@ -80,13 +80,10 @@ class _InputPageState extends State<InputPage> {
               SizedBox(height: 16.0),
               TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: 'Material'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter an email address.';
-                  } else if (!RegExp(r'^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$')
-                      .hasMatch(value)) {
-                    return 'Please enter a valid email address.';
+                    return 'Please enter a material.';
                   }
                   return null;
                 },

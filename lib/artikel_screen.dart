@@ -326,6 +326,48 @@ class Article {
       views: 3457,
       chipLabel: 'Kopi Susu',
     ),
-    // Tambahkan artikel lainnya sesuai kebutuhan
+    Article(
+      imageUrl:
+          'https://i.pinimg.com/564x/33/44/2e/33442e58a74503c7cef4fc437a4ebc8e.jpg',
+      title: 'Cold Brew vs. Iced Coffee: Memahami Perbedaan dan Manfaatnya',
+      createdAt: DateTime.now().subtract(Duration(days: 4)),
+      views: 237,
+      chipLabel: 'Espresso',
+    ),
+    Article(
+      imageUrl:
+          'https://i.pinimg.com/564x/46/42/55/4642558bdcb713adfaca5b2f24c26445.jpg',
+      title: 'Mengenal Lebih Jauh Jenis Kopi: Espresso, Americano, dan Lainnya',
+      createdAt: DateTime.now().subtract(Duration(days: 9)),
+      views: 7653,
+      chipLabel: 'Macchiato',
+    ),
+    Article(
+      imageUrl:
+          'https://i.pinimg.com/736x/8f/47/48/8f47482edbe305c9752e8e79609a385d.jpg',
+      title:
+          'Coffea Arabica: Melihat Lebih Dekat Jenis Kopi yang Paling Populer',
+      createdAt: DateTime.now().subtract(Duration(days: 27)),
+      views: 983,
+      chipLabel: 'Irish Coffe',
+    ),
+    Article(
+      imageUrl:
+          'https://i.pinimg.com/564x/b2/31/46/b231461f1d9c8c8a3fbba058dd530b84.jpg',
+      title:
+          'Kopi dan Kesehatan: Manfaat dan Risiko Konsumsi Kopi Secara Berkala',
+      createdAt: DateTime.now().subtract(Duration(days: 23)),
+      views: 292,
+      chipLabel: 'Flat White',
+    ),
+    Article(
+      imageUrl:
+          'https://i.pinimg.com/564x/2d/9b/f4/2d9bf4c1a747bb97440cff7659354681.jpg',
+      title: 'Menikmati Kopi dengan Gaya: Panduan untuk Penikmat Kopi Pemula',
+      createdAt: DateTime.now().subtract(Duration(days: 14)),
+      views: 764,
+      chipLabel: 'Affogato',
+    ),
+    // Tambahkan artikel lainnya disni
   ];
 }

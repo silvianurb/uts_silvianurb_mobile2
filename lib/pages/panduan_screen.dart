@@ -71,9 +71,15 @@ class MyRefreshIndicator extends StatelessWidget {
               itemCount: data.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage(data[index].avatar),
-                    radius: 35.0,
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Sesuaikan radius sesuai keinginan
+                    child: Image.network(
+                      data[index].avatar,
+                      width: 70.0,
+                      height: 70.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   title: Text(data[index].name),
                   subtitle: Text(data[index].email),
