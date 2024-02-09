@@ -48,177 +48,186 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: GridView.count(
-        padding: const EdgeInsets.all(25),
-        crossAxisCount: 2,
-        children: <Widget>[
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ArtikelScreen()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.article,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Artikel Kopi", style: TextStyle(fontSize: 15.0)),
-                  ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                "assets/download.jpeg"), // Ganti dengan path gambar yang sesuai
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: GridView.count(
+          padding: const EdgeInsets.all(25),
+          crossAxisCount: 2,
+          children: <Widget>[
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ArtikelScreen()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.article,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Artikel Kopi", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Panduan()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.coffee_maker,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Panduan Brew", style: TextStyle(fontSize: 15.0)),
-                  ],
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Panduan()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.coffee_maker,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Panduan Brew", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MenikmatiKopi()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.coffee,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Penikmat Kopi", style: TextStyle(fontSize: 15.0)),
-                  ],
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MenikmatiKopi()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.coffee,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Penikmat Kopi", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Jenis()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.coffee,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Jenis Kopi", style: TextStyle(fontSize: 15.0)),
-                  ],
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Jenis()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.coffee,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Jenis Kopi", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const KelasScreen()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.class_,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Kelas Virtual", style: TextStyle(fontSize: 15.0)),
-                  ],
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const KelasScreen()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.class_,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Kelas Virtual", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            margin: const EdgeInsets.all(12),
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Kuis()));
-              },
-              splashColor: Colors.white,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const <Widget>[
-                    Icon(
-                      Icons.quiz_sharp,
-                      size: 60,
-                      color: Colors.brown,
-                    ),
-                    Text("Kuis Kopi", style: TextStyle(fontSize: 15.0)),
-                  ],
+            Card(
+              margin: const EdgeInsets.all(12),
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Kuis()));
+                },
+                splashColor: Colors.white,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      Icon(
+                        Icons.quiz_sharp,
+                        size: 60,
+                        color: Colors.brown,
+                      ),
+                      Text("Kuis Kopi", style: TextStyle(fontSize: 15.0)),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

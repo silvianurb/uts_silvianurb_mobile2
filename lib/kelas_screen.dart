@@ -16,16 +16,25 @@ class _KelasScreenState extends State<KelasScreen> {
       appBar: AppBar(
         title: const Text('Espresso Edu - Kelas Virtual'),
       ),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: _buildCategoryButtons(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                "assets/download.jpeg"), // Ganti dengan path gambar yang sesuai
+            fit: BoxFit.cover,
           ),
-          Expanded(
-            child: _buildClassList(),
-          ),
-        ],
+        ),
+        child: Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: _buildCategoryButtons(),
+            ),
+            Expanded(
+              child: _buildClassList(),
+            ),
+          ],
+        ),
       ),
     );
   }

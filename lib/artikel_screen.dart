@@ -28,113 +28,121 @@ class ArtikelScreen extends StatelessWidget {
           child: AppText.title('Espresso Edu'),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 10),
-              SizedBox(height: 25),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/download.jpeg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 10),
+                SizedBox(height: 25),
 
-              // INI BUAT ARTICLE LIST
-              Container(
-                height: MediaQuery.of(context).size.height - 200,
-                child: ListView.builder(
-                  itemCount: articles.length,
-                  itemBuilder: (context, index) {
-                    final article = articles[index];
+                // INI BUAT ARTICLE LIST
+                Container(
+                  height: MediaQuery.of(context).size.height - 200,
+                  child: ListView.builder(
+                    itemCount: articles.length,
+                    itemBuilder: (context, index) {
+                      final article = articles[index];
 
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(15.0),
-                              child: Container(
-                                width: 130,
-                                height: 130,
-                                child: Image.network(
-                                  article.imageUrl,
-                                  fit: BoxFit.cover,
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: Container(
+                                  width: 130,
+                                  height: 130,
+                                  child: Image.network(
+                                    article.imageUrl,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(width: 15),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  if (article.chipLabel.isNotEmpty)
-                                    CustomChipSmall(
-                                      label: article.chipLabel,
-                                      color: getRandomColor(),
+                              SizedBox(width: 15),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    if (article.chipLabel.isNotEmpty)
+                                      CustomChipSmall(
+                                        label: article.chipLabel,
+                                        color: getRandomColor(),
+                                      ),
+                                    Text(
+                                      article.title,
+                                      style: TextStyle(fontSize: 16),
                                     ),
-                                  Text(
-                                    article.title,
-                                    style: TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            '${DateTime.now().difference(article.createdAt).inHours} Hari Lalu',
-                                            style:
-                                                const TextStyle(fontSize: 12),
-                                          ),
-                                          const SizedBox(width: 20),
-                                          Icon(
-                                            Icons.visibility,
-                                            size: 18,
-                                          ),
-                                          const SizedBox(width: 5),
-                                          Text(
-                                            '${article.views} Dilihat',
-                                            style:
-                                                const TextStyle(fontSize: 12),
-                                          ),
-                                        ],
-                                      ),
-                                      Container(
-                                        width: 30,
-                                        height: 30,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.blue,
+                                    const SizedBox(height: 5),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              '${DateTime.now().difference(article.createdAt).inHours} Hari Lalu',
+                                              style:
+                                                  const TextStyle(fontSize: 12),
+                                            ),
+                                            const SizedBox(width: 20),
+                                            Icon(
+                                              Icons.visibility,
+                                              size: 18,
+                                            ),
+                                            const SizedBox(width: 5),
+                                            Text(
+                                              '${article.views} Dilihat',
+                                              style:
+                                                  const TextStyle(fontSize: 12),
+                                            ),
+                                          ],
                                         ),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.arrow_forward_ios_rounded,
-                                            color: Colors.white,
-                                            size:
-                                                18, //Tangani klik tombol (navigasi ke artikel penuh, dll.)
+                                        Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue,
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.arrow_forward_ios_rounded,
+                                              color: Colors.white,
+                                              size:
+                                                  18, //Tangani klik tombol (navigasi ke artikel penuh, dll.)
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Divider(
-                          color: Colors.grey,
-                          height: 25,
-                        ),
-                      ],
-                    );
-                  },
+                            ],
+                          ),
+                          Divider(
+                            color: Colors.grey,
+                            height: 25,
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 ),
-              ),
-              const SizedBox(height: 100), // Atur sesuai kebutuhan
-            ],
+                const SizedBox(height: 100), // Atur sesuai kebutuhan
+              ],
+            ),
           ),
         ),
       ),

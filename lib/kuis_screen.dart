@@ -9,6 +9,8 @@ class Kuis extends StatefulWidget {
 
 class _KuisState extends State<Kuis> {
   int currentQuestionIndex = 0;
+  int correctAnswers = 0;
+  bool quizFinished = false;
 
   List<Map<String, dynamic>> questions = [
     {
@@ -52,6 +54,10 @@ class _KuisState extends State<Kuis> {
 
   @override
   Widget build(BuildContext context) {
+    if (quizFinished) {
+      return _buildQuizFinishedScreen();
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Espresso Edu - Kuis Kopi'),
@@ -99,11 +105,13 @@ class _KuisState extends State<Kuis> {
     if (selectedAnswer == correctAnswer) {
       // Jawaban benar,
       _showSnackbar('Jawaban Benar!');
-      _moveToNextQuestion();
+      correctAnswers++;
     } else {
       // Jawaban salah,
       _showSnackbar('Jawaban Salah. Coba lagi!');
     }
+
+    _moveToNextQuestion();
   }
 
   void _moveToNextQuestion() {
@@ -111,9 +119,62 @@ class _KuisState extends State<Kuis> {
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
       } else {
-        // Jika sudah mencapai pertanyaan terakhir, lakukan sesuatu (contoh: selesai kuis)
-        _showSnackbar('Kuis Selesai!');
+        // Jika sudah mencapai pertanyaan terakhir, selesai kuis
+        _showQuizFinishedScreen();
       }
+    });
+  }
+
+  void _showQuizFinishedScreen() {
+    setState(() {
+      quizFinished = true;
+    });
+  }
+
+  Widget _buildQuizFinishedScreen() {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Espresso Edu - Kuis Selesai'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Kuis Selesai!',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              Text(
+                'Skor Anda: $correctAnswers / ${questions.length}',
+                style: TextStyle(
+                  fontSize: 18.0,
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              ElevatedButton(
+                onPressed: () {
+                  _resetQuiz();
+                },
+                child: Text('Ulang Kuis'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _resetQuiz() {
+    setState(() {
+      currentQuestionIndex = 0;
+      correctAnswers = 0;
+      quizFinished = false;
     });
   }
 

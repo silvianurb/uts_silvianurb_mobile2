@@ -17,27 +17,36 @@ class _JenisState extends State<Jenis> {
       appBar: AppBar(
         title: const Text('Espresso Edu - Jenis Kopi'),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextField(
-              controller: _jenisController,
-              decoration: InputDecoration(
-                hintText: 'Masukkan jenis kopi...',
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                "assets/download.jpeg"), // Ganti dengan path gambar yang sesuai
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              TextField(
+                controller: _jenisController,
+                decoration: InputDecoration(
+                  hintText: 'Masukkan jenis kopi...',
+                ),
               ),
-            ),
-            const SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-                tambahJenis();
-              },
-              child: const Text('Tambah'),
-            ),
-            const SizedBox(height: 16.0),
-            for (String jenis in _jenisList) _buildJenisItem(jenis),
-          ],
+              const SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () {
+                  tambahJenis();
+                },
+                child: const Text('Tambah'),
+              ),
+              const SizedBox(height: 16.0),
+              for (String jenis in _jenisList) _buildJenisItem(jenis),
+            ],
+          ),
         ),
       ),
     );
