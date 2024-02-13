@@ -1,4 +1,6 @@
-# uts_pm2_silvianurb
+# UAS - PEMROGRAMAN MOBILE 2
+# Silvia Nur Baiti - 21552011400
+# TIF RP 221 PA
 
 A new Flutter project.
 
